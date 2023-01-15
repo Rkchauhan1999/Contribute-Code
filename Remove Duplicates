@@ -1,0 +1,71 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.*;
+
+public class RemoveDupliacte {
+
+	public static void main(String[] args) {
+
+//		int[] a= {1,1,2,3,5,2,3};
+//		int l=a.length;
+
+		List<Integer> s = new ArrayList<Integer>();
+		s.add(1);
+		s.add(1);
+		s.add(2);
+		s.add(3);
+		s.add(5);
+		s.add(2);
+		for (Integer i : s) {
+			System.out.print(i + " ");
+		}
+		System.out.println();
+		Set<Integer> set = new HashSet<Integer>(s);
+//		for(Integer i:set) {
+//			System.out.println(i);
+//		}
+		set.forEach(i -> {
+			System.out.print(i + " ");
+		});
+		System.out.println();
+// App -01
+		String str1 = "javaTpoint is the best learning website";
+		int l = str1.length();
+		LinkedHashSet<Character> ch = new LinkedHashSet<Character>();
+
+		for (int i = 0; i < str1.length(); i++) {
+			ch.add(str1.charAt(i));
+
+		}
+		ch.forEach(ss -> {
+			System.out.print(ss);
+		});
+		System.out.println();
+
+//		App -02
+		StringBuilder sb = new StringBuilder();
+		str1.chars().distinct().forEach(c -> sb.append((char) c));
+		System.out.print(sb);
+
+//		App -3
+		StringBuilder sb3 = new StringBuilder();
+		String str = str1.toLowerCase();
+		for (int i = 0; i < l; i++) {
+			char c = str.charAt(i);
+			int idx = str.indexOf(c, i + 1);
+			if (idx == -1) {
+				sb3.append(c);
+			}
+		}
+		System.out.println();
+		System.out.println(sb3);
+
+//		App- 04
+
+	}
+
+}
