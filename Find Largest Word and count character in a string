@@ -1,0 +1,17 @@
+public class Largest {
+
+	public static void main(String[] args) {
+		String s = "Length and appearance do not determine whether a section in a paper is a paragraph";
+		String[] countWords = s.split("\\s");
+		String longest = "";
+		int temp = 0;
+		for (int i = 0; i < countWords.length; i++) {
+			if (countWords[i].length() > temp) {
+				temp = countWords[i].length();
+				longest = countWords[i];
+			}
+		}
+		System.out.println(temp);
+		System.out.println(longest);
+	}
+}
